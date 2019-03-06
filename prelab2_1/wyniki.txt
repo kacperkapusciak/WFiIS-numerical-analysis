@@ -1,0 +1,16 @@
+Wskaznik uwarunkowania macierzy A wynosi: 9e+20
+
+Wskaznik uwarunkowania macierzy B wynosi: 333
+
+
+Iloczyn macierzy A*A^-1:
+0	0	0	
+-2147483648	-2147483648	0	
+0	0	0	
+
+
+Iloczyn macierzy B*B^-1:
+1	0	0	
+0	1	0	
+0	0	1	
+
