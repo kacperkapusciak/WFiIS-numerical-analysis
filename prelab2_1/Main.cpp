@@ -77,11 +77,11 @@ void macierz_odwrotna(float **A, int *v, std::vector<float *> &tab, float ***A_i
 }
 
 float matrix_max(float **A) {
-  float max = A[1][1];
+  float max = abs(A[1][1]);
   for(int i = 1; i <= N; i++)
     for(int j = 1; j <= N; j++)
-      if (max < A[i][j])
-        max = A[i][j];
+      if (max < abs(A[i][j]))
+        max = abs(A[i][j]);
 
   return max;
 }
