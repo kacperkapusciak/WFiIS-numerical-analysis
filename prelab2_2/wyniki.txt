@@ -1,0 +1,5 @@
+Elementy diagonalne macierzy U:
+0.2	-0.0833333	-0.00238095	-5.95264e-05	
+
+Wyznacznik macierzy A: -2.36216e-09
+Wskaznik uwarunkowania macierzy A wynosi: 14699.4
