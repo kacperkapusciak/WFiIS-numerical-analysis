@@ -1,9 +1,6 @@
 #include "deps.h"
-#include <iostream>
-#include <fstream>
 #include <vector>
-using std::cout;
-using std::endl;
+
 #define N 3
 
 void inicjalizuj_macierz(float ***A){
