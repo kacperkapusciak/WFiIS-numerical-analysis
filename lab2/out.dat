@@ -1,0 +1,11 @@
+Elementy na diagonali macierzy U: 0.5	0.0333333	-0.00138889	0.000102041	
+
+Wyznacznik macierzy A: -2.36206e-09
+
+Macierz A^-1:
+200	-1200	2100	-1120	
+-1200	8100	-15120	8400	
+2100	-15120	29400	-16800	
+-1120	8400	-16800	9800	
+
+Wskaznik uwarunkowania macierzy A wynosi: 14700
