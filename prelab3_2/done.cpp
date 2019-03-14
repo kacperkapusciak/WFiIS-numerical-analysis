@@ -41,16 +41,16 @@ int main(void)
 
     ///// Gauss method ////////
 
-    float **A_Gauss = matrix(1, N, 1, N);
-    intialize_matrix_Gauss(&A_Gauss);
-    float **vect = matrix(1, N, 1, 1);
-    time(&time_Gauss_start);
-    gaussj(A_Gauss, N, vect, 1);
-    time(&time_Gauss_stop);
-    Gauss_time = difftime(time_Gauss_stop, time_Gauss_start);
-    std::cout << "Duration of Gauss method: " << Gauss_time << " \nDuration of conjugate gradient method : " << GC_time << "\n";
-    free_matrix(vect, 1, N, 1, 1);
-    free_matrix(A_Gauss, 1, N, 1, N);
+    // float **A_Gauss = matrix(1, N, 1, N);
+    // intialize_matrix_Gauss(&A_Gauss);
+    // float **vect = matrix(1, N, 1, 1);
+    // time(&time_Gauss_start);
+    // gaussj(A_Gauss, N, vect, 1);
+    // time(&time_Gauss_stop);
+    // Gauss_time = difftime(time_Gauss_stop, time_Gauss_start);
+    // std::cout << "Duration of Gauss method: " << Gauss_time << " \nDuration of conjugate gradient method : " << GC_time << "\n";
+    // free_matrix(vect, 1, N, 1, 1);
+    // free_matrix(A_Gauss, 1, N, 1, N);
 }
 void intialize_matrix(gsl_matrix *A)
 {
@@ -100,7 +100,7 @@ void intialize_vector_x(gsl_vector **vector)
 {
     for (int i = 0; i < N; i++)
     {
-        gsl_vector_set(*vector, i, i);
+        gsl_vector_set(*vector, i, 0);
     }
 }
 void GC(gsl_matrix *A, gsl_vector *vector_b, gsl_vector *vector_x)
