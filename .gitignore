@@ -18,11 +18,6 @@ main
 *.app
 *.swp
 **/build/
-deps/gaussj.cpp
-deps/ludcmp.cpp
-deps/nrutil.cpp
-deps/nrutil.h
-deps/pythag.cpp
-deps/tqli.cpp
-deps/tred2.cpp
-
+deps/
+.vscode/
+dependencies/
