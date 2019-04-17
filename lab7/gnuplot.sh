@@ -5,7 +5,9 @@ set title "Wychylenie x(t)" # tytul wykresu
 set xlabel "t" # etykieta osi OX
 set ylabel "x(t)" # etykieta osi OY
 set grid # wlaczenie widoczności siatki pomocniczej
-plot "out.dat" w p t "x(t), dt = 0.01"
+plot "out1.dat" w p t "x(t), dt = 0.01"
+plot "out2.dat" w p t "x(t), dt = 0.01"
+plot "rownolegle_nierownolegle.dat" w p t "x(t), dt = 0.01"
 # plot - polecenie rysowania pliku o podanej nazwie "out.dat"
 # w p == with points
 # t "dt = 0.1" == title "dt = 0.1"
