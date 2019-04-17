@@ -62,7 +62,7 @@ int main() {
 		file3 << iloraz_roznicowy_tab[i] << std::endl;
 
     for (double x = -5; x <= 5; x += 0.01 ) {
-        file << x << "\t" << funkcja(x) << wielomian_interpolacyjny(wezly, wartosci_funkcji, x, iloraz_roznicowy_tab) << std::endl;
+        file << x << "\t" << funkcja(x) << "\t" << wielomian_interpolacyjny(wezly, wartosci_funkcji, x, iloraz_roznicowy_tab) << std::endl;
     }
 
     double krok = 10.0 / (double)N ;
