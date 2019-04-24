@@ -40,7 +40,7 @@ double wielomian_interpolacyjny(double wezly[N+1], double wartosci_funkcji[N+1],
 
 int main() {
     double wezly[N+1] = {-5, -2, -0.5, 0, 0.5, 2, 5};
-    // double wezly[N+1];
+
     double wartosci_funkcji[N+1];
     double iloraz_roznicowy_tab[N+1];
 
@@ -49,8 +49,6 @@ int main() {
     file2.open("out2.dat");
     file3.open("rownolegle_nierownolegle.dat");
 
-    // wezly[0] = -5;
-    // wezly[7] = 5;
 
     for (int i = 0; i < N+1; i++) 
         wartosci_funkcji[i] = funkcja(wezly[i]);
@@ -81,7 +79,40 @@ int main() {
     file3 << std::endl;
 	for(int i = 0; i <= N; i++)
 		file3 << iloraz_roznicowy_tab[i] << std::endl;
-	
+    
+    //albo dopisać do programu ogólne wzory na współczynniki wielomianu
+    double a[6];
+    double temp = 0;
+
+    //a6
+    a[6] = iloraz_roznicowy_tab[6];
+
+    //a5
+    for (int i = 0; i <= 5; i++)
+        temp += wezly[i];
+
+    a[5] = iloraz_roznicowy_tab[5] - iloraz_roznicowy_tab[6] * temp;
+
+    //a4 a3 a2 a1
+    for (int j = 4; j > 0; j--) {
+        temp = 0;
+        for (int i = 0; i <= j; i++)
+            temp += wezly[i] * a[j+1];
+        a[j] = iloraz_roznicowy_tab[j] - temp;
+    }
+
+    //a0
+    a[0] = iloraz_roznicowy_tab[6];
+    for (int i = 5; i >= 0; i--){
+        a[0] = iloraz_roznicowy_tab[i] - wezly[i] * a[0];
+    }
+
+    std::cout << "W(x)=";
+    for (int i = 6; i > 0; i--)
+        std::cout << a[i] << " x^" << i << " + ";
+    std::cout << a[0] << std::endl;
+
+
 
     file.close();
     file2.close();
