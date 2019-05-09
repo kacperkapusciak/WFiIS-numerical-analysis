@@ -15,6 +15,7 @@ main
 *.pch
 *.exe
 *.out
+*.dat
 *.app
 *.swp
 **/build/
